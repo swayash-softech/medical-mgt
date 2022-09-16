@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+</head>
+<body>
+    <div class="sub-header">
+        <div class="log log-active">
+            <a href="./login.html">Login</a>
+        </div>
+        <div class="log">
+            <a href="./reg.html">Register</a>
+        </div>
+    </div>
+
+    <main>
+        
+        <div class="form" data-anijs="if: load, on: window, do: bounceInLeft">
+            <h3>
+                Welcome Back
+            </h3>
+            <form action="" autocomplete="off">
+                <input type="text" name="name" id="name" placeholder="Full Name" required> <br>
+                <input type="number" minlength="10" maxlength="10" name="mob" id="mob" placeholder="Mobile Number" required> <br>
+                <input type="password" name="pass" id="pass" placeholder="Password" required> <br>
+                <input type="submit" data-anijs="if: mouseover, on: .sub, do: pulse" class="sub" value="Login">
+            </form>
+        </div>
+        <div class="ill-img">
+            <img src="./login-ill.png" alt="" width="400">
+        </div>
+    </main>
+
+    <script src="anijs-master\dist\anijs-min.js"></script>
+</body>
+</html>
