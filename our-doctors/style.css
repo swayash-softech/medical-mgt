@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap');
+
+:root{
+    --grey: rgba(211, 211, 211, 0.458);
+    --green: #1fc29d;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+main{
+    text-align: center;
+}
+
+h1, h2{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sub-header{
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    /* font-weight: 700; */
+    width: 100%;
+    background-image: url("svg3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.sub-header h1{
+    color: white;
+    font-size: 3.3rem;
+}
+
+.arena{
+    margin: 3% 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    /* width: 100%; */
+}
+
+.arena .doctor-card{
+    width: 300px;
+    height: 300px;
+    width: 100%;
+    background: url('./dead.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    /* padding: 2rem; */
+    transition: all 200ms ease-in-out;
+}
+
+.arena .doctor-card:hover{
+    transform: scale(1.05);
+}
+
+.arena .doctor-card .doctor-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 50%;
+    padding-bottom: 1rem;
+    position: relative;
+    bottom: auto;
+    color: white;
+    /* margin: 0rem 1.1rem; */
+    /* background: url('./card-bg.svg'); */
+    background-color: rgba(0, 0, 0, 0.607);
+    width: 100%;
+    background-size: cover;
+    padding-left: 1rem;
+}
+
+.view-profile-link a{
+    /* display: none; */
+    padding: .2rem .5rem;
+    background-color: white;
+    color: var(--green);
+    text-decoration: none;
+    background-color: var(--green);
+    color: white;
+    opacity: .7;
+
+}
+
+.view-profile-link a:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width:1300px) {
+    .arena{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .arena{
+        grid-template-columns:  1fr 1fr;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .arena{
+        grid-template-columns:   1fr;
+    }
+}
